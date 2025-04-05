@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 function AddCameraForm() {
   const router=useRouter()
   const [formData, setFormData] = useState({
-    video_type: '',
+    video_type: 'mp4',
     video_link: '',
     name: '',
     location:'',

@@ -8,6 +8,8 @@ FILE_ORIGINAL_NAME = 'file_original_name'
 FRIENDLY_NAME = 'friendly_name'
 VIDEO_LINK = 'video_link'
 VIDEO_TYPE = 'video_type'
+LATITUDE = 'latitude'
+LONGITUDE = 'longitude'
 STREAM_READ_DURATION = 'stream_read_duration'
 STREAM_READ_DURATION_DEFAULT = 60
 
@@ -29,6 +31,7 @@ LOG_CONFIG_FILE = 'log_config_file'
 # Processing engine definition
 PROCESSOR = 'processor'
 KNIFE_THRESHOLD = 'knife_threshold'
+THRESHOLD = 'threshold'
 OUTPUT_PATH = 'output_path'
 BAD_FRAME_SKIP_SIZE = 'bad_frame_skip_size'
 FRAME_SKIP_SIZE = 'frame_skip_size'

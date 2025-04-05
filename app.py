@@ -68,8 +68,8 @@ import event.event as events
 if __name__ == "__main__":
     
 	cameras.init()
-	# print(cameras.to_camera_ini_name(cameras.get_cameras()[0]))
-	# print(cameras.cameras_to_json())
+	print(cameras.to_camera_ini_name(cameras.get_cameras()[1]))
+	#print(cameras.cameras_to_json())
 	for camera in cameras.get_cameras():
 		print(f"starting wep process for camera '{camera.name}'")
 		wep_process = mp.Process(target=start_wep_instance, args=(cameras.to_camera_ini_name(camera),))

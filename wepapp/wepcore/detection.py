@@ -49,6 +49,7 @@ def detect(msg_py,msg_local_py,msg_passing):
 
         log.info("Video source: {}".format(cfg.source.get(cons.VIDEO_LINK)))
         knife_threshold = cfg.knife_threshold # 0.7
+        threshold = cfg.threshold # 0.4
         output_path_set = False
 
         config = ConfigProto()
@@ -81,6 +82,12 @@ def detect(msg_py,msg_local_py,msg_passing):
 
             video_friendly_name = ui["friendly_name"]
             log.debug('Friendly name: {}'.format(video_friendly_name))
+
+            latitude = ui["lat"]
+            log.debug('Latitude: {}'.format(latitude))
+
+            longitude = ui["long"]
+            log.debug('Longitude: {}'.format(longitude))
 
             #video_original_name = ui["file_original_name"]
             #log.debug('Original name: {}'.format(video_original_name))
@@ -289,7 +296,7 @@ def detect(msg_py,msg_local_py,msg_passing):
                     #weapon json to show frames where weapons detected
                         for s,c in zip(scores_weapon[0],classes_weapon[0]):
 
-                            if (float(s)>0):
+                            if (float(s)>threshold):
                                 if (int(c)==0):
                                     detection_class  = 'Gun : '+str(s)   #Added score for prediction also
                                 elif (int(c)==1):
@@ -314,7 +321,7 @@ def detect(msg_py,msg_local_py,msg_passing):
                                     dt_string = now.strftime("%d-%m-%Y %H:%M:%S")
                                     cv2.imwrite(cfg.output_path + video_name + '/' + image_capture_path, image1_write)
                                     weapon_arr.append(image_capture_path)
-                                    data_weapon = {'status':detection_type_weapon,'video_name':video_name1,'datetime':dt_string,'time(s)':str(round(time_taking,2)),'Threat_status':threat_status,'image_path':image_capture_path,'weapon_images':weapon_arr}
+                                    data_weapon = {'status':detection_type_weapon,'video_name':video_name1,'datetime':dt_string,'time(s)':str(round(time_taking,2)),'Threat_status':threat_status,'image_path':image_capture_path,'weapon_images':weapon_arr,'latitude':latitude,'longitude':longitude}
                                 elif (video_ext in ['rtsp','mjpeg']):
                                     now = datetime.now()
                                     dt_string = now.strftime("%d-%m-%Y %H:%M:%S")
@@ -322,7 +329,7 @@ def detect(msg_py,msg_local_py,msg_passing):
                                     image_capture_path = 'weapon_'+dt_string+'.jpg'
                                     cv2.imwrite(cfg.output_path + video_name + '/' + image_capture_path, image1_write)
                                     weapon_arr.append(image_capture_path)
-                                    data_weapon = {'status':detection_type_weapon,'video_name':video_name1,'datetime':dt_string,'Threat_status':threat_status,'image_path':image_capture_path,'weapon_images':weapon_arr}
+                                    data_weapon = {'status':detection_type_weapon,'video_name':video_name1,'datetime':dt_string,'Threat_status':threat_status,'image_path':image_capture_path,'weapon_images':weapon_arr,'latitude':latitude,'longitude':longitude}
 
                                 msg_py['payload'] = data_weapon
                                 msg_py['data_weapon'] = data_weapon

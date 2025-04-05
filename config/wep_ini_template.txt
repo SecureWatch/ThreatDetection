@@ -3,6 +3,8 @@
   building = $location
   video_type = $type
   video_link = $link
+  lat = $lat
+  long = $long
   stream_read_duration = 7200
 
 [log]
@@ -10,13 +12,14 @@
 
 [processor]
   knife_threshold = 0.7
+  threshold = 0.4
   output_path = inferences/
   bad_frame_skip_size = 10
   frame_skip_size = $frame_size
 
 [inference]
   framework = tf
-  weights_weapon = weaponresource/checkpoints_weapon/WeaponOct7_608_6000/
+  weights_weapon = weaponresource/checkpoints_weapon/WeaponOct7_608_8K/
   input_size_weapon = 608
   tiny = False
   model = yolov4
