@@ -65,6 +65,10 @@ db.sqlite3-journal
 instance/
 .webassets-cache
 
+# Computer Vision Models
+*.data-00000-of-00001
+*.mp4
+
 # Scrapy stuff:
 .scrapy
 
