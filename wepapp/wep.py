@@ -28,6 +28,8 @@ payload[cons.BUILDING] = cfg.source.get(cons.BUILDING)            #'Building A'
 payload[cons.VIDEO_TYPE] = cfg.source.get(cons.VIDEO_TYPE)        #'mp4'
 payload[cons.FRIENDLY_NAME] = cfg.source.get(cons.FRIENDLY_NAME)  #'friendly_name'
 payload[cons.FILE_ORIGINAL_NAME] = cfg.source.get(cons.FILE_NAME) #'9mm_fast_walk.mp4'
+# payload[cons.LATITUDE] = cfg.source.get(cons.LATITUDE) #
+# payload[cons.LONGITUDE] = cfg.source.get(cons.LONGITUDE) #
 
 log.info("Input request: {}".format(payload))
 

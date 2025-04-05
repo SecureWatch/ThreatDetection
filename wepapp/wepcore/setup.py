@@ -26,6 +26,8 @@ if __name__ == 'wepcore.setup':
 		config.get(cons.SOURCE, cons.FRIENDLY_NAME)
 		config.get(cons.SOURCE, cons.BUILDING)
 		config.get(cons.SOURCE, cons.VIDEO_LINK)
+		config.get(cons.SOURCE, cons.LATITUDE)
+		config.get(cons.SOURCE, cons.LONGITUDE)
 
 		source = config[cons.SOURCE]
 		source.get(cons.VIDEO_TYPE)
@@ -35,6 +37,9 @@ if __name__ == 'wepcore.setup':
 		if source.get(cons.VIDEO_TYPE) in cons.VIDEO_FILE_TYPES:
 			if not Path(source.get(cons.VIDEO_LINK)).is_file():
 				raise FileNotFoundError(source.get(cons.VIDEO_LINK))
+		
+		#log.info(source.get(cons.LATITUDE))
+		#longitude = source.get(cons.LONGITUDE)
 
 		logc = config[cons.LOG]
 		if not Path(logc.get(cons.LOG_CONFIG_FILE)).is_file():
@@ -42,11 +47,13 @@ if __name__ == 'wepcore.setup':
 		log.config.fileConfig(logc.get(cons.LOG_CONFIG_FILE))
 
 		config.get(cons.PROCESSOR, cons.KNIFE_THRESHOLD)
+		config.get(cons.PROCESSOR, cons.THRESHOLD)
 		config.get(cons.PROCESSOR, cons.OUTPUT_PATH)
 		config.get(cons.PROCESSOR, cons.BAD_FRAME_SKIP_SIZE)
 		config.get(cons.PROCESSOR, cons.FRAME_SKIP_SIZE)
 		processor = config[cons.PROCESSOR]
 		knife_threshold = float(processor.get(cons.KNIFE_THRESHOLD))
+		threshold = float(processor.get(cons.THRESHOLD))
 		output_path = processor.get(cons.OUTPUT_PATH)
 		if output_path == "False":
 			output_path = False
