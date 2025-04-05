@@ -1,8 +1,8 @@
-2025-04-05 14:12:54 : INFO : <module> : 12 - Setup complete (v1.0)
-2025-04-05 14:12:54 : INFO : <module> : 21 - No GPU devices found
-2025-04-05 14:12:54 : INFO : <module> : 34 - Input request: {'video_link': '../wepapp/videos/9mm_fast_walk.mp4', 'building': 'residence', 'video_type': 'mp4', 'friendly_name': 'Residence', 'file_original_name': None}
-2025-04-05 14:12:54 : INFO : <module> : 44 - Detection for video starts...
-2025-04-05 14:12:54 : INFO : <module> : 46 - GPU Utilization before: 
-2025-04-05 14:12:54 : INFO : <module> : 23 - imported packages within inference_images_weapon
-2025-04-05 14:12:54 : INFO : <module> : 41 - loading weapon model: tf
-2025-04-05 14:12:54 : ERROR : <module> : 61 - Processing exception occurred: SavedModel file does not exist at: weaponresource/checkpoints_weapon/WeaponOct7_608_8K//{saved_model.pbtxt|saved_model.pb}
+2025-04-05 14:17:05 : INFO : <module> : 12 - Setup complete (v1.0)
+2025-04-05 14:17:05 : INFO : <module> : 21 - No GPU devices found
+2025-04-05 14:17:05 : INFO : <module> : 34 - Input request: {'video_link': '../wepapp/videos/9mm_fast_walk.mp4', 'building': 'residence', 'video_type': 'mp4', 'friendly_name': 'Residence', 'file_original_name': None}
+2025-04-05 14:17:05 : INFO : <module> : 44 - Detection for video starts...
+2025-04-05 14:17:05 : INFO : <module> : 46 - GPU Utilization before: 
+2025-04-05 14:17:05 : INFO : <module> : 23 - imported packages within inference_images_weapon
+2025-04-05 14:17:05 : INFO : <module> : 41 - loading weapon model: tf
+2025-04-05 14:17:05 : ERROR : <module> : 61 - Processing exception occurred: SavedModel file does not exist at: weaponresource/checkpoints_weapon/WeaponOct7_608_8K//{saved_model.pbtxt|saved_model.pb}

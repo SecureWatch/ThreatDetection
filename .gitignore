@@ -66,8 +66,8 @@ instance/
 .webassets-cache
 
 # Computer Vision Models
-#*.data-00000-of-00001
-#*.mp4
+*.data-00000-of-00001
+*.mp4
 
 # Scrapy stuff:
 .scrapy
