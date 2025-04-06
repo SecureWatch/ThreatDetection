@@ -78,7 +78,7 @@ if __name__ == "__main__":
 	web_hook = mp.Process(target=start_webhook, args=())
 	web_hooks.append(web_hook)
 	web_hook.start()
-	print(events.events_to_json())
+	#print(events.events_to_json())
 	events.init()
 	for event in events.get_events():
 		print(f"event status: {event.status}, video name: {event.video_name}, threat: {event.Threat_status}, path: {event.image_path}, images: {event.weapon_images[0]}")
