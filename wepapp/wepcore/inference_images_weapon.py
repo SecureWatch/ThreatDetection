@@ -47,7 +47,7 @@ if framework == 'tflite':
     log.info("loaded weapon model")
 else:
     # get the absolute path to the weights file
-    weights_weapon = os.path.abspath(weights_weapon)
+    #weights_weapon = os.path.abspath(weights_weapon)
     saved_model_loaded_weapon = tf.saved_model.load(weights_weapon, tags=[tag_constants.SERVING])
     log.info("loaded weapon model")
 

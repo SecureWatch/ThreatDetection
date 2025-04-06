@@ -3,6 +3,7 @@
 #run only one video at a time. stop processing video when press stop and save the video which is processed until
 import GPUtil
 import tensorflow as tf 
+#from wepcore.detection_yolo11 import detect
 from wepcore.detection import detect
 import wepcore.constants as cons
 import logging as log
