@@ -25,7 +25,7 @@ def init():
                 print(f"creating wep ini file for camera {camera.name}")
                 t = Template(init_template_file.read())
                 x = t.substitute(name=camera.name, location=camera.location, type=camera.video_type, link=camera.video_link, frame_size=camera.frame_skip_size,
-                                 lat=camera.lat,long=camera.long)
+                                lat=camera.lat,long=camera.long)
                 init_file = open(f"config/wep_{camera.name}.ini", "w")
                 init_file.write(x)
                 init_file.close()

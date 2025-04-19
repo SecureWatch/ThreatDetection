@@ -34,6 +34,7 @@ def add_event_as_json():
     if (content_type == 'application/json'):
         data = request.get_json()
         dataJson=json.loads(data)
+        print("HIT /api/event/events endpoint")
         print("Data type",type(json.loads(data)))
         print("Data ",json.loads(data))
 

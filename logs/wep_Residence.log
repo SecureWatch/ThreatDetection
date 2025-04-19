@@ -1,48 +1,48 @@
-2025-04-18 00:38:32 : INFO : <module> : 13 - Setup complete (v1.0)
-2025-04-18 00:38:32 : INFO : <module> : 22 - No GPU devices found
-2025-04-18 00:38:32 : INFO : <module> : 35 - Input request: {'video_link': '../wepapp/videos/9mm_fast_walk.mp4', 'building': 'residence', 'video_type': 'mp4', 'friendly_name': 'Residence', 'file_original_name': None, 'lat': '-12.345', 'long': '45.56'}
-2025-04-18 00:38:32 : INFO : <module> : 45 - Detection for video starts...
-2025-04-18 00:38:32 : INFO : <module> : 47 - GPU Utilization before: 
-2025-04-18 00:38:32 : INFO : <module> : 23 - imported packages within inference_images_weapon
-2025-04-18 00:38:32 : INFO : <module> : 41 - loading weapon model: tf
-2025-04-18 00:38:51 : INFO : <module> : 52 - loaded weapon model
-2025-04-18 00:38:51 : INFO : detect : 50 - Video source: ../wepapp/videos/9mm_fast_walk.mp4
-2025-04-18 00:38:51 : INFO : detect : 72 - msg_local_py[payload]: {'video_link': '../wepapp/videos/9mm_fast_walk.mp4', 'building': 'residence', 'video_type': 'mp4', 'friendly_name': 'Residence', 'file_original_name': None, 'lat': '-12.345', 'long': '45.56'}
-2025-04-18 00:38:51 : INFO : detect : 141 - Begin video capture now: ../wepapp/videos/9mm_fast_walk.mp4
-2025-04-18 00:38:51 : INFO : detect : 146 - video: < cv2.VideoCapture 0x30b7db250>
-2025-04-18 00:38:51 : WARNING : detect : 194 - Residence folder removed
-2025-04-18 00:38:51 : WARNING : detect : 198 - Residence folder created
-2025-04-18 00:38:52 : INFO : detect : 280 - Frame #: 100 of 258
-2025-04-18 00:38:52 : INFO : inference_images_weapon : 59 - started weapon inference
-2025-04-18 00:38:57 : INFO : inference_images_weapon : 89 - fps after inference: 0.1899528218381182
-2025-04-18 00:38:57 : INFO : inference_images_weapon : 147 - Ended weapon inference
-2025-04-18 00:38:57 : INFO : detect : 288 - FPS01: 0.19
-2025-04-18 00:38:58 : INFO : detect : 338 - After sending the input
-2025-04-18 00:38:58 : INFO : do_restful : 20 - RESTful: {'enable': True, 'url': 'http://localhost:5001/consumeevent'}
-2025-04-18 00:38:58 : INFO : do_restful : 25 - post to local wep RESTful service {"status": "Weapon Detected |Rifle : 0.48259354", "video_name": "Residence", "datetime": "18-04-2025 00:38:57", "time(s)": "528.5", "Threat_status": "Threat detected | Weapon:['Rifle : 0.48259354']", "image_path": "weapon_528.5.jpg", "weapon_images": ["weapon_528.5.jpg"], "latitude": "-12.345", "longitude": "45.56"}
-2025-04-18 00:38:58 : INFO : do_restful : 27 - response: <Response [201]>
-2025-04-18 00:38:58 : INFO : do_restful : 29 - post to remote RESTful service {"status": "Weapon Detected |Rifle : 0.48259354", "video_name": "Residence", "datetime": "18-04-2025 00:38:57", "time(s)": "528.5", "Threat_status": "Threat detected | Weapon:['Rifle : 0.48259354']", "image_path": "weapon_528.5.jpg", "weapon_images": ["weapon_528.5.jpg"], "latitude": "-12.345", "longitude": "45.56"}, url:http://localhost:5001/consumeevent
-2025-04-18 00:38:58 : INFO : do_restful : 31 - response: <Response [200]>
-2025-04-18 00:38:58 : INFO : detect : 350 - After fetching img
-2025-04-18 00:38:58 : WARNING : detect : 388 - Rifle : 0.48259354 Detected in Frame: 100
-2025-04-18 00:38:58 : INFO : detect : 407 - output assignment. formatvp80 path:inferences/
-2025-04-18 00:38:58 : INFO : detect : 428 - FPS02: 0.18
-2025-04-18 00:39:01 : INFO : detect : 280 - Frame #: 200 of 258
-2025-04-18 00:39:01 : INFO : inference_images_weapon : 59 - started weapon inference
-2025-04-18 00:39:03 : INFO : inference_images_weapon : 89 - fps after inference: 0.5889181610516862
-2025-04-18 00:39:03 : INFO : inference_images_weapon : 147 - Ended weapon inference
-2025-04-18 00:39:03 : INFO : detect : 288 - FPS01: 0.59
-2025-04-18 00:39:03 : INFO : detect : 338 - After sending the input
-2025-04-18 00:39:03 : INFO : do_restful : 20 - RESTful: {'enable': True, 'url': 'http://localhost:5001/consumeevent'}
-2025-04-18 00:39:03 : INFO : do_restful : 25 - post to local wep RESTful service {"status": "Weapon Detected |Gun : 0.8199616", "video_name": "Residence", "datetime": "18-04-2025 00:39:03", "time(s)": "341.09", "Threat_status": "Threat detected | Weapon:['Gun : 0.8199616']", "image_path": "weapon_341.09.jpg", "weapon_images": ["weapon_341.09.jpg"], "latitude": "-12.345", "longitude": "45.56"}
-2025-04-18 00:39:03 : INFO : do_restful : 27 - response: <Response [201]>
-2025-04-18 00:39:03 : INFO : do_restful : 29 - post to remote RESTful service {"status": "Weapon Detected |Gun : 0.8199616", "video_name": "Residence", "datetime": "18-04-2025 00:39:03", "time(s)": "341.09", "Threat_status": "Threat detected | Weapon:['Gun : 0.8199616']", "image_path": "weapon_341.09.jpg", "weapon_images": ["weapon_341.09.jpg"], "latitude": "-12.345", "longitude": "45.56"}, url:http://localhost:5001/consumeevent
-2025-04-18 00:39:03 : INFO : do_restful : 31 - response: <Response [200]>
-2025-04-18 00:39:03 : INFO : detect : 350 - After fetching img
-2025-04-18 00:39:03 : WARNING : detect : 388 - Gun : 0.8199616 Detected in Frame: 200
-2025-04-18 00:39:03 : INFO : detect : 407 - output assignment. formatvp80 path:inferences/
-2025-04-18 00:39:03 : INFO : detect : 428 - FPS02: 0.50
-2025-04-18 00:39:05 : INFO : detect : 222 - Ended video inference here
-2025-04-18 00:39:05 : INFO : <module> : 51 - Response: {'payload': [{'status': 'Completed', 'video_name': 'Residence', 'video_type': 'mp4', 'datetime': '18-04-2025 00:39:05', 'Threat_status': '', 'last_updated': True}], 'data_weapon': {'status': 'Weapon Detected |Gun : 0.8199616', 'video_name': 'Residence', 'datetime': '18-04-2025 00:39:03', 'time(s)': '341.09', 'Threat_status': "Threat detected | Weapon:['Gun : 0.8199616']", 'image_path': 'weapon_341.09.jpg', 'weapon_images': ['weapon_341.09.jpg'], 'latitude': '-12.345', 'longitude': '45.56'}} <class 'dict'>
-2025-04-18 00:39:05 : INFO : <module> : 53 - GPU Utilization after:
-2025-04-18 00:39:05 : INFO : <module> : 58 - Response: {'status': 'Weapon Detected |Gun : 0.8199616', 'video_name': 'Residence', 'datetime': '18-04-2025 00:39:03', 'time(s)': '341.09', 'Threat_status': "Threat detected | Weapon:['Gun : 0.8199616']", 'image_path': 'weapon_341.09.jpg', 'weapon_images': ['weapon_341.09.jpg'], 'latitude': '-12.345', 'longitude': '45.56'} <class 'dict'>
+2025-04-19 17:34:13 : INFO : <module> : 13 - Setup complete (v1.0)
+2025-04-19 17:34:13 : INFO : <module> : 22 - No GPU devices found
+2025-04-19 17:34:13 : INFO : <module> : 35 - Input request: {'video_link': '../wepapp/videos/9mm_fast_walk.mp4', 'building': 'residence', 'video_type': 'mp4', 'friendly_name': 'Residence', 'file_original_name': None, 'lat': '-12.345', 'long': '45.56'}
+2025-04-19 17:34:13 : INFO : <module> : 45 - Detection for video starts...
+2025-04-19 17:34:13 : INFO : <module> : 47 - GPU Utilization before: 
+2025-04-19 17:34:13 : INFO : <module> : 23 - imported packages within inference_images_weapon
+2025-04-19 17:34:13 : INFO : <module> : 41 - loading weapon model: tf
+2025-04-19 17:36:04 : INFO : <module> : 52 - loaded weapon model
+2025-04-19 17:36:04 : INFO : detect : 50 - Video source: ../wepapp/videos/9mm_fast_walk.mp4
+2025-04-19 17:36:04 : INFO : detect : 72 - msg_local_py[payload]: {'video_link': '../wepapp/videos/9mm_fast_walk.mp4', 'building': 'residence', 'video_type': 'mp4', 'friendly_name': 'Residence', 'file_original_name': None, 'lat': '-12.345', 'long': '45.56'}
+2025-04-19 17:36:04 : INFO : detect : 141 - Begin video capture now: ../wepapp/videos/9mm_fast_walk.mp4
+2025-04-19 17:36:05 : INFO : detect : 146 - video: < cv2.VideoCapture 0xffff2beb8250>
+2025-04-19 17:36:05 : WARNING : detect : 194 - Residence folder removed
+2025-04-19 17:36:05 : WARNING : detect : 198 - Residence folder created
+2025-04-19 17:36:10 : INFO : detect : 280 - Frame #: 100 of 258
+2025-04-19 17:36:10 : INFO : inference_images_weapon : 59 - started weapon inference
+2025-04-19 17:36:28 : INFO : inference_images_weapon : 89 - fps after inference: 0.05602307673587424
+2025-04-19 17:36:28 : INFO : inference_images_weapon : 147 - Ended weapon inference
+2025-04-19 17:36:28 : INFO : detect : 288 - FPS01: 0.05
+2025-04-19 17:36:29 : INFO : detect : 338 - After sending the input
+2025-04-19 17:36:29 : INFO : do_restful : 20 - RESTful: {'enable': True, 'url': 'http://localhost:5001/consumeevent'}
+2025-04-19 17:36:29 : INFO : do_restful : 25 - post to local wep RESTful service {"status": "Weapon Detected |Rifle : 0.48259324", "video_name": "Residence", "datetime": "19-04-2025 17:36:29", "time(s)": "1820.9", "Threat_status": "Threat detected | Weapon:['Rifle : 0.48259324']", "image_path": "weapon_1820.9.jpg", "weapon_images": ["weapon_1820.9.jpg"], "latitude": "-12.345", "longitude": "45.56"}
+2025-04-19 17:36:30 : INFO : do_restful : 27 - response: <Response [201]>
+2025-04-19 17:36:30 : INFO : do_restful : 29 - post to remote RESTful service {"status": "Weapon Detected |Rifle : 0.48259324", "video_name": "Residence", "datetime": "19-04-2025 17:36:29", "time(s)": "1820.9", "Threat_status": "Threat detected | Weapon:['Rifle : 0.48259324']", "image_path": "weapon_1820.9.jpg", "weapon_images": ["weapon_1820.9.jpg"], "latitude": "-12.345", "longitude": "45.56"}, url:http://localhost:5001/consumeevent
+2025-04-19 17:36:30 : ERROR : do_restful : 33 - Failed to post to RESTful service: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: /consumeevent (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff299af6d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-04-19 17:36:30 : INFO : detect : 350 - After fetching img
+2025-04-19 17:36:31 : WARNING : detect : 388 - Rifle : 0.48259324 Detected in Frame: 100
+2025-04-19 17:36:31 : INFO : detect : 407 - output assignment. formatvp80 path:inferences/
+2025-04-19 17:36:33 : INFO : detect : 428 - FPS02: 0.04
+2025-04-19 17:36:37 : INFO : detect : 280 - Frame #: 200 of 258
+2025-04-19 17:36:37 : INFO : inference_images_weapon : 59 - started weapon inference
+2025-04-19 17:36:42 : INFO : inference_images_weapon : 89 - fps after inference: 0.19829524778797922
+2025-04-19 17:36:42 : INFO : inference_images_weapon : 147 - Ended weapon inference
+2025-04-19 17:36:42 : INFO : detect : 288 - FPS01: 0.20
+2025-04-19 17:36:43 : INFO : detect : 338 - After sending the input
+2025-04-19 17:36:43 : INFO : do_restful : 20 - RESTful: {'enable': True, 'url': 'http://localhost:5001/consumeevent'}
+2025-04-19 17:36:43 : INFO : do_restful : 25 - post to local wep RESTful service {"status": "Weapon Detected |Gun : 0.81996155", "video_name": "Residence", "datetime": "19-04-2025 17:36:42", "time(s)": "1017.65", "Threat_status": "Threat detected | Weapon:['Gun : 0.81996155']", "image_path": "weapon_1017.65.jpg", "weapon_images": ["weapon_1017.65.jpg"], "latitude": "-12.345", "longitude": "45.56"}
+2025-04-19 17:36:43 : INFO : do_restful : 27 - response: <Response [201]>
+2025-04-19 17:36:43 : INFO : do_restful : 29 - post to remote RESTful service {"status": "Weapon Detected |Gun : 0.81996155", "video_name": "Residence", "datetime": "19-04-2025 17:36:42", "time(s)": "1017.65", "Threat_status": "Threat detected | Weapon:['Gun : 0.81996155']", "image_path": "weapon_1017.65.jpg", "weapon_images": ["weapon_1017.65.jpg"], "latitude": "-12.345", "longitude": "45.56"}, url:http://localhost:5001/consumeevent
+2025-04-19 17:36:43 : ERROR : do_restful : 33 - Failed to post to RESTful service: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: /consumeevent (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff299bfac0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-04-19 17:36:43 : INFO : detect : 350 - After fetching img
+2025-04-19 17:36:43 : WARNING : detect : 388 - Gun : 0.81996155 Detected in Frame: 200
+2025-04-19 17:36:43 : INFO : detect : 407 - output assignment. formatvp80 path:inferences/
+2025-04-19 17:36:43 : INFO : detect : 428 - FPS02: 0.17
+2025-04-19 17:36:46 : INFO : detect : 222 - Ended video inference here
+2025-04-19 17:36:46 : INFO : <module> : 51 - Response: {'payload': [{'status': 'Completed', 'video_name': 'Residence', 'video_type': 'mp4', 'datetime': '19-04-2025 17:36:46', 'Threat_status': '', 'last_updated': True}], 'data_weapon': {'status': 'Weapon Detected |Gun : 0.81996155', 'video_name': 'Residence', 'datetime': '19-04-2025 17:36:42', 'time(s)': '1017.65', 'Threat_status': "Threat detected | Weapon:['Gun : 0.81996155']", 'image_path': 'weapon_1017.65.jpg', 'weapon_images': ['weapon_1017.65.jpg'], 'latitude': '-12.345', 'longitude': '45.56'}} <class 'dict'>
+2025-04-19 17:36:46 : INFO : <module> : 53 - GPU Utilization after:
+2025-04-19 17:36:46 : INFO : <module> : 58 - Response: {'status': 'Weapon Detected |Gun : 0.81996155', 'video_name': 'Residence', 'datetime': '19-04-2025 17:36:42', 'time(s)': '1017.65', 'Threat_status': "Threat detected | Weapon:['Gun : 0.81996155']", 'image_path': 'weapon_1017.65.jpg', 'weapon_images': ['weapon_1017.65.jpg'], 'latitude': '-12.345', 'longitude': '45.56'} <class 'dict'>

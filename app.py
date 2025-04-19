@@ -8,13 +8,16 @@ import subprocess
 from test.test import test_bp
 from camera.routes import camera_bp
 from event.routes import event_bp
-
+import os
 from extenstions import db
 
 from flask_cors import CORS
 
-app = Flask(__name__)
+app = Flask(__name__,instance_relative_config=True)
 CORS(app)
+
+# allowed_origins = os.environ.get('CORS_ALLOWED_ORIGINS', 'http://localhost:3000').split(',')
+# CORS(app, resources={r"/api/*": {"origins": allowed_origins}})
 
 api = Api(app)
 app.register_blueprint(test_bp, url_prefix='/api/test')
@@ -82,4 +85,4 @@ if __name__ == "__main__":
 	events.init()
 	for event in events.get_events():
 		print(f"event status: {event.status}, video name: {event.video_name}, threat: {event.Threat_status}, path: {event.image_path}, images: {event.weapon_images[0]}")
-	app.run()
+	app.run(host="0.0.0.0", port=5000)
