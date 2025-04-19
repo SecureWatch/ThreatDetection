@@ -34,10 +34,10 @@ app.debug=True
 def home():	
 	return render_template("index.html")
 
-@app.route("/public/<path:filename>")
-def serve_file(filename):
-	print("FIles",filename)
-	return send_from_directory('./wepapp/inferences',filename)
+@app.route("/public/<path:subpath>")
+def serve_file(subpath):
+    print("FIles", subpath)
+    return send_from_directory('wepapp/inferences', subpath)
 
 
 def start_wep_instance(ini_file):
@@ -83,3 +83,4 @@ if __name__ == "__main__":
 	for event in events.get_events():
 		print(f"event status: {event.status}, video name: {event.video_name}, threat: {event.Threat_status}, path: {event.image_path}, images: {event.weapon_images[0]}")
 	app.run()
+	

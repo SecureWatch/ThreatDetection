@@ -9,7 +9,7 @@ import requests
 http = urllib3.PoolManager()
 
 local_restful_event_url = "http://127.0.0.1:5000/api/event/events"
-
+local_restful_url = "http://127.0.0.1:5050/alerts/send"
 def do_push(data_weapon):
 	# do_mqtt(data_weapon)
 	# do_raptor_create_incident(data_weapon)
@@ -21,14 +21,24 @@ def do_restful(data_weapon):
 		if not cfg.restful[cons.ENABLE]:
 			log.info("RESTful post is disabled")
 			return
-
+		print("-----------check for error---------")
 		log.info("post to local wep RESTful service " + data_weapon)
 		response = requests.post(local_restful_event_url, json=data_weapon)
+		responseDB = requests.post(local_restful_url, json=data_weapon)
+		print("------------1st response-------------")
+		print(response)
+		print(responseDB)
+		print("--------------------------------")
 		log.info(f"response: {response}")
+		log.info(f"responseDB: {responseDB}")
 
 		log.info("post to remote RESTful service " + data_weapon + ", url:" + cfg.restful[cons.URL])
 		response = requests.post(cfg.restful[cons.URL], json=data_weapon)
+		responseDB = requests.post(local_restful_url, json=data_weapon)
+		print(response)
+		print(responseDB)
 		log.info(f"response: {response}")
+		log.info(f"responseDB: {responseDB}")
 	except Exception as e:
 		log.error("Failed to post to RESTful service: {}".format(e))
 	pass

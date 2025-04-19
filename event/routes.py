@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request, redirect, url_for,jsonify
 import json
+import requests
 from .models import Event
 from datetime import datetime
 from extenstions import db
@@ -30,12 +31,16 @@ def get_events_as_json():
     
 @event_bp.route('/events', methods=["POST"])
 def add_event_as_json():
+    local_restful_url = "http://127.0.0.1:5050/alerts/send"
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
         data = request.get_json()
         dataJson=json.loads(data)
         print("Data type",type(json.loads(data)))
         print("Data ",json.loads(data))
+        responseDB = requests.post(local_restful_url, json=data)
+        print(responseDB)
+        print("--------------------------------")
 
         if 'status' not in data or 'video_name' not in data:
             return jsonify({'message': 'Missing camera_id or config field in request'}), 400

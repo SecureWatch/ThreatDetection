@@ -16,7 +16,7 @@ log.info("Setup complete ({})".format(cfg.version_info))
 #os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 physical_devices = tf.config.experimental.list_physical_devices('GPU')
 if len(physical_devices) > 0:
-    tf.config.experimental.set_memory_growth(physical_devices[0], True)
+   # tf.config.experimental.set_memory_growth(physical_devices[0], True)
     log.info("GPU devices found: {}".format(physical_devices))
 else:
     log.info("No GPU devices found")

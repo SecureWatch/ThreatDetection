@@ -36,7 +36,8 @@ if physical_devices:
         [tf.config.LogicalDeviceConfiguration(memory_limit=1024*1),
          tf.config.LogicalDeviceConfiguration(memory_limit=1024*1)])
     logical_gpus = tf.config.list_logical_devices('GPU')
-    log.info(len(physical_devices), "Physical GPU,", len(logical_gpus), "Logical GPUs")
+    log.info(f"{len(physical_devices)} Physical GPU(s), {len(logical_gpus)} Logical GPU(s)")
+    #log.info(len(physical_devices), "Physical GPU,", len(logical_gpus), "Logical GPUs")
   except RuntimeError as e:
     # Virtual devices must be set before GPUs have been initialized
     log.error("GPU info fetch failed: {}".format(e))

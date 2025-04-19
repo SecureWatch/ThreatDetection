@@ -3,12 +3,12 @@ flask_restful
 pandas
 pillow
 GPUtil
-tensorflow
+tensorflow-macos
+tensorflow-metal
 paho-mqtt
 pymongo
 opencv-python
 easydict
-paho-mqtt
 flask_socketio
 flask_cors
 Flask-SQLAlchemy
