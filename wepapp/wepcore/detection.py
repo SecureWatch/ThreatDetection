@@ -153,6 +153,7 @@ def detect(msg_py,msg_local_py,msg_passing):
                     log.info("Within reading path")
                     vid = cv2.VideoCapture(str(video_path))  #to get height, width of the frame to save
                     vid_latest_rtsp = cv2.VideoCapture(video_path)    #Read the latest frame from rtsp stream
+                    vid.set(cv2.CAP_PROP_FPS, cons.FPS)
                     #########This part is added for find whether the rtsp stream url is invalid
                     return_value, frame = vid.read()
 

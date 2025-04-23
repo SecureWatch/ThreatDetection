@@ -40,6 +40,7 @@ FRAMEWORK = 'framework'
 WEIGHTS_WEAPON = 'weights_weapon'
 INPUT_SIZE_WEAPON = 'input_size_weapon'
 TINY = 'tiny'
+FPS =3
 MODEL = 'model'
 OUTPUT_FORMAT = 'output_format'
 IOU_WEAPON = 'iou_weapon'
