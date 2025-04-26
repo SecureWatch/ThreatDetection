@@ -31,16 +31,12 @@ def get_events_as_json():
     
 @event_bp.route('/events', methods=["POST"])
 def add_event_as_json():
-    local_restful_url = "http://127.0.0.1:5050/alerts/send"
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
         data = request.get_json()
         dataJson=json.loads(data)
         print("Data type",type(json.loads(data)))
         print("Data ",json.loads(data))
-        responseDB = requests.post(local_restful_url, json=data)
-        print(responseDB)
-        print("--------------------------------")
 
         if 'status' not in data or 'video_name' not in data:
             return jsonify({'message': 'Missing camera_id or config field in request'}), 400
@@ -73,3 +69,14 @@ def get_camera_configuration(event_id):
         event_data =alerts.as_dict()
         return jsonify(event_data), 200
     return "Camera not found", 404  
+
+@event_bp.route('/alerts/send', methods=["POST"])
+def receive_alert():
+    try:
+        data = request.get_json()
+        # Process the alert data here
+        # You can add your alert handling logic
+        return jsonify({'message': 'Alert received successfully'}), 200
+    except Exception as e:
+        print(str(e))
+        return jsonify({'message': str(e)}), 500  

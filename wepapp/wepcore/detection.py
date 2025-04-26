@@ -149,11 +149,12 @@ def detect(msg_py,msg_local_py,msg_passing):
                     log.error('Video Capture Exception: {}'.format(e))
                     return msg_py
             elif (video_ext in ['rtsp','mjpeg']):
+                #important 
                 try:
                     log.info("Within reading path")
                     vid = cv2.VideoCapture(str(video_path))  #to get height, width of the frame to save
                     vid_latest_rtsp = cv2.VideoCapture(video_path)    #Read the latest frame from rtsp stream
-                    vid.set(cv2.CAP_PROP_FPS, cons.FPS)
+                    #vid.set(cv2.CAP_PROP_FPS, cons.FPS)
                     #########This part is added for find whether the rtsp stream url is invalid
                     return_value, frame = vid.read()
 
@@ -323,7 +324,10 @@ def detect(msg_py,msg_local_py,msg_passing):
                                     dt_string = now.strftime("%d-%m-%Y %H:%M:%S")
                                     cv2.imwrite(cfg.output_path + video_name + '/' + image_capture_path, image1_write)
                                     weapon_arr.append(image_capture_path)
+                                    #data_weapon = {'status':detection_type_weapon,'video_name':video_name1,'datetime':dt_string,'time(s)':str(round(time_taking,2)),'Threat_status':threat_status,'image_path':image_capture_path,'weapon_images':weapon_arr,'latitude':latitude,'longitude':longitude}
+                                    
                                     data_weapon = {'status':detection_type_weapon,'video_name':video_name1,'datetime':dt_string,'time(s)':str(round(time_taking,2)),'Threat_status':threat_status,'image_path':image_capture_path,'weapon_images':weapon_arr,'latitude':latitude,'longitude':longitude}
+
                                 elif (video_ext in ['rtsp','mjpeg']):
                                     now = datetime.now()
                                     dt_string = now.strftime("%d-%m-%Y %H:%M:%S")
