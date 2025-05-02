@@ -1,0 +1,16 @@
+2025-04-24 19:31:28 : INFO : <module> : 13 - Setup complete (v1.0)
+2025-04-24 19:31:28 : INFO : <module> : 22 - No GPU devices found
+2025-04-24 19:31:28 : INFO : <module> : 35 - Input request: {'video_link': 'https://127.0.1.711', 'building': 'abc', 'video_type': 'rtsp', 'friendly_name': 'test', 'file_original_name': None, 'lat': '12.0', 'long': '34.0'}
+2025-04-24 19:31:28 : INFO : <module> : 43 - Detection for video stream starts...
+2025-04-24 19:31:28 : INFO : <module> : 47 - GPU Utilization before: 
+2025-04-24 19:31:28 : INFO : <module> : 23 - imported packages within inference_images_weapon
+2025-04-24 19:31:28 : INFO : <module> : 41 - loading weapon model: tf
+2025-04-24 19:31:43 : INFO : <module> : 52 - loaded weapon model
+2025-04-24 19:31:43 : INFO : detect : 50 - Video source: https://127.0.1.711
+2025-04-24 19:31:43 : INFO : detect : 72 - msg_local_py[payload]: {'video_link': 'https://127.0.1.711', 'building': 'abc', 'video_type': 'rtsp', 'friendly_name': 'test', 'file_original_name': None, 'lat': '12.0', 'long': '34.0'}
+2025-04-24 19:31:43 : INFO : detect : 141 - Begin video capture now: https://127.0.1.711
+2025-04-24 19:31:43 : INFO : detect : 152 - Within reading path
+2025-04-24 19:32:44 : ERROR : detect : 161 - Stream URL is invalid
+2025-04-24 19:32:44 : ERROR : detect : 167 - Exception in the current frame: {'status': 'Stream URL is invalid!', 'video_name': 'test', 'video_type': 'rtsp', 'datetime': '24-04-2025 19:32:44', 'Threat_status': '', 'last_updated': True}
+2025-04-24 19:32:44 : INFO : <module> : 51 - Response: {'payload': [{'status': 'Stream URL is invalid!', 'video_name': 'test', 'video_type': 'rtsp', 'datetime': '24-04-2025 19:32:44', 'Threat_status': '', 'last_updated': True}]} <class 'dict'>
+2025-04-24 19:32:44 : INFO : <module> : 53 - GPU Utilization after:

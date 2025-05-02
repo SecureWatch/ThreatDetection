@@ -1,0 +1,7 @@
+{
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/dashboard/cameras/page": "app/dashboard/cameras/page.js",
+  "/dashboard/notifications/page": "app/dashboard/notifications/page.js",
+  "/dashboard/cameras/[id]/page": "app/dashboard/cameras/[id]/page.js",
+  "/dashboard/cameras/edit/[id]/page": "app/dashboard/cameras/edit/[id]/page.js"
+}

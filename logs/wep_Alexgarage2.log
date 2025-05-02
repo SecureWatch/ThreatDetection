@@ -1,0 +1,7 @@
+2025-05-01 21:36:43 : INFO : <module> : 13 - Setup complete (v1.0)
+2025-05-01 21:36:43 : INFO : <module> : 22 - No GPU devices found
+2025-05-01 21:36:43 : INFO : <module> : 35 - Input request: {'video_link': 'rtsp:1//192.168.1.121:554/profile2/media.smp', 'building': 'view2', 'video_type': 'rtsp', 'friendly_name': 'Alexgarage2', 'file_original_name': None, 'lat': '82.0', 'long': '32.0'}
+2025-05-01 21:36:43 : INFO : <module> : 43 - Detection for video stream starts...
+2025-05-01 21:36:43 : INFO : <module> : 47 - GPU Utilization before: 
+2025-05-01 21:36:43 : INFO : <module> : 23 - imported packages within inference_images_weapon
+2025-05-01 21:36:43 : INFO : <module> : 41 - loading weapon model: tf

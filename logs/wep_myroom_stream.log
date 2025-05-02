@@ -1,0 +1,12 @@
+2025-05-01 15:45:49 : INFO : <module> : 13 - Setup complete (v1.0)
+2025-05-01 15:45:49 : INFO : <module> : 22 - No GPU devices found
+2025-05-01 15:45:49 : INFO : <module> : 35 - Input request: {'video_link': 'rtsp://192.168.8.121:8080/h264_opus.sdp', 'building': 'Science', 'video_type': 'rtsp', 'friendly_name': 'myroom_stream', 'file_original_name': None, 'lat': '100.0', 'long': '120.0'}
+2025-05-01 15:45:49 : INFO : <module> : 43 - Detection for video stream starts...
+2025-05-01 15:45:49 : INFO : <module> : 47 - GPU Utilization before: 
+2025-05-01 15:45:49 : INFO : <module> : 23 - imported packages within inference_images_weapon
+2025-05-01 15:45:49 : INFO : <module> : 41 - loading weapon model: tf
+2025-05-01 15:46:01 : INFO : <module> : 52 - loaded weapon model
+2025-05-01 15:46:01 : INFO : detect : 50 - Video source: rtsp://192.168.8.121:8080/h264_opus.sdp
+2025-05-01 15:46:01 : INFO : detect : 72 - msg_local_py[payload]: {'video_link': 'rtsp://192.168.8.121:8080/h264_opus.sdp', 'building': 'Science', 'video_type': 'rtsp', 'friendly_name': 'myroom_stream', 'file_original_name': None, 'lat': '100.0', 'long': '120.0'}
+2025-05-01 15:46:01 : INFO : detect : 141 - Begin video capture now: rtsp://192.168.8.121:8080/h264_opus.sdp
+2025-05-01 15:46:01 : INFO : detect : 152 - Within reading path
