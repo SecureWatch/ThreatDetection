@@ -31,7 +31,7 @@ def do_restful(data_weapon):
 			'camera_name': data_weapon_c['video_name'],
 			'datetime': data_weapon_c['datetime'],
 			'threat_status': data_weapon_c['Threat_status'],
-			'school_id': 'c52e3b1c-26e2-11f0-b7e7-e28b11b5589a'
+			'school_id': '0fca6c00-2705-11f0-9e15-15bb6df06b45'
 			#'554330a5-2230-11f0-931d-42010a400002'
 		}
 		log.info("post to local wep RESTful service" + data_weapon)

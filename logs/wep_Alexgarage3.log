@@ -1,7 +1,145 @@
-2025-05-01 21:36:43 : INFO : <module> : 13 - Setup complete (v1.0)
-2025-05-01 21:36:43 : INFO : <module> : 22 - No GPU devices found
-2025-05-01 21:36:43 : INFO : <module> : 35 - Input request: {'video_link': 'rtsp:1//192.168.1.131:554/profile2/media.smp', 'building': 'view3', 'video_type': 'rtsp', 'friendly_name': 'Alexgarage3', 'file_original_name': None, 'lat': '32.0', 'long': '98.0'}
-2025-05-01 21:36:43 : INFO : <module> : 43 - Detection for video stream starts...
-2025-05-01 21:36:43 : INFO : <module> : 47 - GPU Utilization before: 
-2025-05-01 21:36:43 : INFO : <module> : 23 - imported packages within inference_images_weapon
-2025-05-01 21:36:43 : INFO : <module> : 41 - loading weapon model: tf
+2025-05-02 16:07:24 : INFO : <module> : 13 - Setup complete (v1.0)
+2025-05-02 16:07:24 : INFO : <module> : 22 - No GPU devices found
+2025-05-02 16:07:24 : INFO : <module> : 35 - Input request: {'video_link': '../wepapp/videos/view1.mp4', 'building': 'view3', 'video_type': 'mp4', 'friendly_name': 'Alexgarage3', 'file_original_name': None, 'lat': '32.0', 'long': '32.0'}
+2025-05-02 16:07:24 : INFO : <module> : 45 - Detection for video starts...
+2025-05-02 16:07:24 : INFO : <module> : 47 - GPU Utilization before: 
+2025-05-02 16:07:24 : INFO : <module> : 23 - imported packages within inference_images_weapon
+2025-05-02 16:07:24 : INFO : <module> : 41 - loading weapon model: tf
+2025-05-02 16:07:42 : INFO : <module> : 52 - loaded weapon model
+2025-05-02 16:07:42 : INFO : detect : 50 - Video source: ../wepapp/videos/view1.mp4
+2025-05-02 16:07:42 : INFO : detect : 72 - msg_local_py[payload]: {'video_link': '../wepapp/videos/view1.mp4', 'building': 'view3', 'video_type': 'mp4', 'friendly_name': 'Alexgarage3', 'file_original_name': None, 'lat': '32.0', 'long': '32.0'}
+2025-05-02 16:07:42 : INFO : detect : 141 - Begin video capture now: ../wepapp/videos/view1.mp4
+2025-05-02 16:07:42 : INFO : detect : 146 - video: < cv2.VideoCapture 0x30b0db250>
+2025-05-02 16:07:42 : WARNING : detect : 194 - Alexgarage3 folder removed
+2025-05-02 16:07:42 : WARNING : detect : 198 - Alexgarage3 folder created
+2025-05-02 16:07:43 : INFO : detect : 280 - Frame #: 100 of 1374
+2025-05-02 16:07:43 : INFO : inference_images_weapon : 59 - started weapon inference
+2025-05-02 16:07:44 : INFO : inference_images_weapon : 89 - fps after inference: 0.6014057306055333
+2025-05-02 16:07:44 : INFO : inference_images_weapon : 147 - Ended weapon inference
+2025-05-02 16:07:44 : INFO : detect : 288 - FPS01: 0.60
+2025-05-02 16:07:44 : INFO : detect : 350 - After fetching img
+2025-05-02 16:07:45 : INFO : detect : 428 - FPS02: 0.57
+2025-05-02 16:07:45 : INFO : detect : 280 - Frame #: 200 of 1374
+2025-05-02 16:07:45 : INFO : inference_images_weapon : 59 - started weapon inference
+2025-05-02 16:07:46 : INFO : inference_images_weapon : 89 - fps after inference: 1.234876945217127
+2025-05-02 16:07:46 : INFO : inference_images_weapon : 147 - Ended weapon inference
+2025-05-02 16:07:46 : INFO : detect : 288 - FPS01: 1.23
+2025-05-02 16:07:46 : INFO : detect : 350 - After fetching img
+2025-05-02 16:07:46 : INFO : detect : 428 - FPS02: 1.21
+2025-05-02 16:07:47 : INFO : detect : 280 - Frame #: 300 of 1374
+2025-05-02 16:07:47 : INFO : inference_images_weapon : 59 - started weapon inference
+2025-05-02 16:07:47 : INFO : inference_images_weapon : 89 - fps after inference: 1.8638145350110893
+2025-05-02 16:07:47 : INFO : inference_images_weapon : 147 - Ended weapon inference
+2025-05-02 16:07:47 : INFO : detect : 288 - FPS01: 1.86
+2025-05-02 16:07:47 : INFO : detect : 350 - After fetching img
+2025-05-02 16:07:47 : INFO : detect : 428 - FPS02: 1.81
+2025-05-02 16:07:48 : INFO : detect : 280 - Frame #: 400 of 1374
+2025-05-02 16:07:48 : INFO : inference_images_weapon : 59 - started weapon inference
+2025-05-02 16:07:48 : INFO : inference_images_weapon : 89 - fps after inference: 1.6467792761135371
+2025-05-02 16:07:48 : INFO : inference_images_weapon : 147 - Ended weapon inference
+2025-05-02 16:07:48 : INFO : detect : 288 - FPS01: 1.63
+2025-05-02 16:07:48 : INFO : detect : 338 - After sending the input
+2025-05-02 16:07:48 : INFO : do_restful : 23 - RESTful: {'enable': True, 'url': 'http://localhost:5001/consumeevent'}
+2025-05-02 16:07:48 : INFO : do_restful : 37 - post to local wep RESTful service{"status": "Weapon Detected |Rifle : 0.6192378", "video_name": "Alexgarage3", "datetime": "02-05-2025 16:07:48", "time(s)": "244.72", "Threat_status": "Threat detected | Weapon:['Rifle : 0.6192378']", "image_path": "weapon_244.72.jpg", "weapon_images": ["weapon_244.72.jpg"], "latitude": "32.0", "longitude": "32.0"}
+2025-05-02 16:07:48 : ERROR : do_restful : 53 - Failed to post to RESTful service: HTTPConnectionPool(host='127.0.0.1', port=5050): Max retries exceeded with url: /api/alert/ai-detection (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x30f68b2b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-05-02 16:07:48 : INFO : detect : 350 - After fetching img
+2025-05-02 16:07:48 : WARNING : detect : 388 - Rifle : 0.6192378 Detected in Frame: 400
+2025-05-02 16:07:48 : INFO : detect : 407 - output assignment. formatvp80 path:inferences/
+2025-05-02 16:07:48 : INFO : detect : 428 - FPS02: 1.47
+2025-05-02 16:07:49 : INFO : detect : 280 - Frame #: 500 of 1374
+2025-05-02 16:07:49 : INFO : inference_images_weapon : 59 - started weapon inference
+2025-05-02 16:07:50 : INFO : inference_images_weapon : 89 - fps after inference: 1.9417291988702308
+2025-05-02 16:07:50 : INFO : inference_images_weapon : 147 - Ended weapon inference
+2025-05-02 16:07:50 : INFO : detect : 288 - FPS01: 1.94
+2025-05-02 16:07:50 : INFO : detect : 338 - After sending the input
+2025-05-02 16:07:50 : INFO : do_restful : 23 - RESTful: {'enable': True, 'url': 'http://localhost:5001/consumeevent'}
+2025-05-02 16:07:50 : INFO : do_restful : 37 - post to local wep RESTful service{"status": "Weapon Detected |Rifle : 0.64918077", "video_name": "Alexgarage3", "datetime": "02-05-2025 16:07:50", "time(s)": "258.15", "Threat_status": "Threat detected | Weapon:['Rifle : 0.64918077']", "image_path": "weapon_258.15.jpg", "weapon_images": ["weapon_258.15.jpg"], "latitude": "32.0", "longitude": "32.0"}
+2025-05-02 16:07:50 : ERROR : do_restful : 53 - Failed to post to RESTful service: HTTPConnectionPool(host='127.0.0.1', port=5050): Max retries exceeded with url: /api/alert/ai-detection (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x30f580f10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-05-02 16:07:50 : INFO : detect : 350 - After fetching img
+2025-05-02 16:07:50 : WARNING : detect : 388 - Rifle : 0.64918077 Detected in Frame: 500
+2025-05-02 16:07:50 : INFO : detect : 407 - output assignment. formatvp80 path:inferences/
+2025-05-02 16:07:50 : INFO : detect : 428 - FPS02: 1.74
+2025-05-02 16:07:51 : INFO : detect : 280 - Frame #: 600 of 1374
+2025-05-02 16:07:51 : INFO : inference_images_weapon : 59 - started weapon inference
+2025-05-02 16:07:52 : INFO : inference_images_weapon : 89 - fps after inference: 1.1187701568752033
+2025-05-02 16:07:52 : INFO : inference_images_weapon : 147 - Ended weapon inference
+2025-05-02 16:07:52 : INFO : detect : 288 - FPS01: 1.12
+2025-05-02 16:07:52 : INFO : detect : 338 - After sending the input
+2025-05-02 16:07:52 : INFO : do_restful : 23 - RESTful: {'enable': True, 'url': 'http://localhost:5001/consumeevent'}
+2025-05-02 16:07:52 : INFO : do_restful : 37 - post to local wep RESTful service{"status": "Weapon Detected |Rifle : 0.44330662", "video_name": "Alexgarage3", "datetime": "02-05-2025 16:07:52", "time(s)": "538.11", "Threat_status": "Threat detected | Weapon:['Rifle : 0.44330662']", "image_path": "weapon_538.11.jpg", "weapon_images": ["weapon_538.11.jpg"], "latitude": "32.0", "longitude": "32.0"}
+2025-05-02 16:07:52 : ERROR : do_restful : 53 - Failed to post to RESTful service: HTTPConnectionPool(host='127.0.0.1', port=5050): Max retries exceeded with url: /api/alert/ai-detection (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x30f68abf0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-05-02 16:07:52 : INFO : detect : 350 - After fetching img
+2025-05-02 16:07:52 : WARNING : detect : 388 - Rifle : 0.44330662 Detected in Frame: 600
+2025-05-02 16:07:52 : INFO : detect : 407 - output assignment. formatvp80 path:inferences/
+2025-05-02 16:07:52 : INFO : detect : 428 - FPS02: 1.05
+2025-05-02 16:07:53 : INFO : detect : 280 - Frame #: 700 of 1374
+2025-05-02 16:07:53 : INFO : inference_images_weapon : 59 - started weapon inference
+2025-05-02 16:07:54 : INFO : inference_images_weapon : 89 - fps after inference: 1.1724169353610148
+2025-05-02 16:07:54 : INFO : inference_images_weapon : 147 - Ended weapon inference
+2025-05-02 16:07:54 : INFO : detect : 288 - FPS01: 1.17
+2025-05-02 16:07:54 : INFO : detect : 350 - After fetching img
+2025-05-02 16:07:54 : INFO : detect : 428 - FPS02: 1.15
+2025-05-02 16:07:55 : INFO : detect : 280 - Frame #: 800 of 1374
+2025-05-02 16:07:55 : INFO : inference_images_weapon : 59 - started weapon inference
+2025-05-02 16:07:55 : INFO : inference_images_weapon : 89 - fps after inference: 2.0236646421837396
+2025-05-02 16:07:55 : INFO : inference_images_weapon : 147 - Ended weapon inference
+2025-05-02 16:07:55 : INFO : detect : 288 - FPS01: 2.02
+2025-05-02 16:07:55 : INFO : detect : 350 - After fetching img
+2025-05-02 16:07:55 : INFO : detect : 428 - FPS02: 1.97
+2025-05-02 16:07:56 : INFO : detect : 280 - Frame #: 900 of 1374
+2025-05-02 16:07:56 : INFO : inference_images_weapon : 59 - started weapon inference
+2025-05-02 16:07:58 : INFO : inference_images_weapon : 89 - fps after inference: 0.8339178354223178
+2025-05-02 16:07:58 : INFO : inference_images_weapon : 147 - Ended weapon inference
+2025-05-02 16:07:58 : INFO : detect : 288 - FPS01: 0.83
+2025-05-02 16:07:58 : INFO : detect : 350 - After fetching img
+2025-05-02 16:07:58 : INFO : detect : 428 - FPS02: 0.82
+2025-05-02 16:07:59 : INFO : detect : 280 - Frame #: 1000 of 1374
+2025-05-02 16:07:59 : INFO : inference_images_weapon : 59 - started weapon inference
+2025-05-02 16:07:59 : INFO : inference_images_weapon : 89 - fps after inference: 1.6044999250216518
+2025-05-02 16:07:59 : INFO : inference_images_weapon : 147 - Ended weapon inference
+2025-05-02 16:07:59 : INFO : detect : 288 - FPS01: 1.60
+2025-05-02 16:07:59 : INFO : detect : 338 - After sending the input
+2025-05-02 16:07:59 : INFO : do_restful : 23 - RESTful: {'enable': True, 'url': 'http://localhost:5001/consumeevent'}
+2025-05-02 16:07:59 : INFO : do_restful : 37 - post to local wep RESTful service{"status": "Weapon Detected |Rifle : 0.728015", "video_name": "Alexgarage3", "datetime": "02-05-2025 16:07:59", "time(s)": "624.52", "Threat_status": "Threat detected | Weapon:['Rifle : 0.728015']", "image_path": "weapon_624.52.jpg", "weapon_images": ["weapon_624.52.jpg"], "latitude": "32.0", "longitude": "32.0"}
+2025-05-02 16:07:59 : ERROR : do_restful : 53 - Failed to post to RESTful service: HTTPConnectionPool(host='127.0.0.1', port=5050): Max retries exceeded with url: /api/alert/ai-detection (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x30f583880>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-05-02 16:07:59 : INFO : detect : 350 - After fetching img
+2025-05-02 16:07:59 : WARNING : detect : 388 - Rifle : 0.728015 Detected in Frame: 1000
+2025-05-02 16:07:59 : INFO : detect : 407 - output assignment. formatvp80 path:inferences/
+2025-05-02 16:07:59 : INFO : detect : 428 - FPS02: 1.47
+2025-05-02 16:08:01 : INFO : detect : 280 - Frame #: 1100 of 1374
+2025-05-02 16:08:01 : INFO : inference_images_weapon : 59 - started weapon inference
+2025-05-02 16:08:01 : INFO : inference_images_weapon : 89 - fps after inference: 1.752409283670016
+2025-05-02 16:08:01 : INFO : inference_images_weapon : 147 - Ended weapon inference
+2025-05-02 16:08:01 : INFO : detect : 288 - FPS01: 1.75
+2025-05-02 16:08:01 : INFO : detect : 338 - After sending the input
+2025-05-02 16:08:01 : INFO : do_restful : 23 - RESTful: {'enable': True, 'url': 'http://localhost:5001/consumeevent'}
+2025-05-02 16:08:01 : INFO : do_restful : 37 - post to local wep RESTful service{"status": "Weapon Detected |Rifle : 0.6081767", "video_name": "Alexgarage3", "datetime": "02-05-2025 16:08:01", "time(s)": "629.34", "Threat_status": "Threat detected | Weapon:['Rifle : 0.6081767']", "image_path": "weapon_629.34.jpg", "weapon_images": ["weapon_629.34.jpg"], "latitude": "32.0", "longitude": "32.0"}
+2025-05-02 16:08:01 : ERROR : do_restful : 53 - Failed to post to RESTful service: HTTPConnectionPool(host='127.0.0.1', port=5050): Max retries exceeded with url: /api/alert/ai-detection (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x30f582ef0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-05-02 16:08:01 : INFO : detect : 350 - After fetching img
+2025-05-02 16:08:01 : WARNING : detect : 388 - Rifle : 0.6081767 Detected in Frame: 1100
+2025-05-02 16:08:01 : INFO : detect : 407 - output assignment. formatvp80 path:inferences/
+2025-05-02 16:08:01 : INFO : detect : 428 - FPS02: 1.62
+2025-05-02 16:08:02 : INFO : detect : 280 - Frame #: 1200 of 1374
+2025-05-02 16:08:02 : INFO : inference_images_weapon : 59 - started weapon inference
+2025-05-02 16:08:03 : INFO : inference_images_weapon : 89 - fps after inference: 0.9005976709406527
+2025-05-02 16:08:03 : INFO : inference_images_weapon : 147 - Ended weapon inference
+2025-05-02 16:08:03 : INFO : detect : 288 - FPS01: 0.90
+2025-05-02 16:08:03 : INFO : detect : 338 - After sending the input
+2025-05-02 16:08:03 : INFO : do_restful : 23 - RESTful: {'enable': True, 'url': 'http://localhost:5001/consumeevent'}
+2025-05-02 16:08:03 : INFO : do_restful : 37 - post to local wep RESTful service{"status": "Weapon Detected |Rifle : 0.59789675", "video_name": "Alexgarage3", "datetime": "02-05-2025 16:08:03", "time(s)": "1334.61", "Threat_status": "Threat detected | Weapon:['Rifle : 0.59789675']", "image_path": "weapon_1334.61.jpg", "weapon_images": ["weapon_1334.61.jpg"], "latitude": "32.0", "longitude": "32.0"}
+2025-05-02 16:08:03 : ERROR : do_restful : 53 - Failed to post to RESTful service: HTTPConnectionPool(host='127.0.0.1', port=5050): Max retries exceeded with url: /api/alert/ai-detection (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x30f68b550>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-05-02 16:08:03 : INFO : detect : 350 - After fetching img
+2025-05-02 16:08:03 : WARNING : detect : 388 - Rifle : 0.59789675 Detected in Frame: 1200
+2025-05-02 16:08:03 : INFO : detect : 407 - output assignment. formatvp80 path:inferences/
+2025-05-02 16:08:03 : INFO : detect : 428 - FPS02: 0.85
+2025-05-02 16:08:04 : INFO : detect : 280 - Frame #: 1300 of 1374
+2025-05-02 16:08:04 : INFO : inference_images_weapon : 59 - started weapon inference
+2025-05-02 16:08:05 : INFO : inference_images_weapon : 89 - fps after inference: 1.9216390934039502
+2025-05-02 16:08:05 : INFO : inference_images_weapon : 147 - Ended weapon inference
+2025-05-02 16:08:05 : INFO : detect : 288 - FPS01: 1.92
+2025-05-02 16:08:05 : INFO : detect : 350 - After fetching img
+2025-05-02 16:08:05 : INFO : detect : 428 - FPS02: 1.87
+2025-05-02 16:08:06 : INFO : detect : 222 - Ended video inference here
+2025-05-02 16:08:06 : INFO : <module> : 51 - Response: {'payload': [{'status': 'Completed', 'video_name': 'Alexgarage3', 'video_type': 'mp4', 'datetime': '02-05-2025 16:08:06', 'Threat_status': '', 'last_updated': True}], 'data_weapon': {'status': 'Weapon Detected |Rifle : 0.59789675', 'video_name': 'Alexgarage3', 'datetime': '02-05-2025 16:08:03', 'time(s)': '1334.61', 'Threat_status': "Threat detected | Weapon:['Rifle : 0.59789675']", 'image_path': 'weapon_1334.61.jpg', 'weapon_images': ['weapon_1334.61.jpg'], 'latitude': '32.0', 'longitude': '32.0'}} <class 'dict'>
+2025-05-02 16:08:06 : INFO : <module> : 53 - GPU Utilization after:
+2025-05-02 16:08:06 : INFO : <module> : 58 - Response: {'status': 'Weapon Detected |Rifle : 0.59789675', 'video_name': 'Alexgarage3', 'datetime': '02-05-2025 16:08:03', 'time(s)': '1334.61', 'Threat_status': "Threat detected | Weapon:['Rifle : 0.59789675']", 'image_path': 'weapon_1334.61.jpg', 'weapon_images': ['weapon_1334.61.jpg'], 'latitude': '32.0', 'longitude': '32.0'} <class 'dict'>
