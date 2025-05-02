@@ -5,10 +5,13 @@ import json
 import wepcore.setup as cfg
 import wepcore.constants as cons
 import requests
+import os
 
 http = urllib3.PoolManager()
 
 local_restful_event_url = "http://127.0.0.1:5000/api/event/events"
+local_restful_url = "http://127.0.0.1:5050/api/alert/ai-detection"
+
 
 def do_push(data_weapon):
 	# do_mqtt(data_weapon)
@@ -21,17 +24,53 @@ def do_restful(data_weapon):
 		if not cfg.restful[cons.ENABLE]:
 			log.info("RESTful post is disabled")
 			return
-
-		log.info("post to local wep RESTful service " + data_weapon)
+		if isinstance(data_weapon, str):
+			data_weapon_c = json.loads(data_weapon)
+		data_dict = {
+			'camera_loc': data_weapon_c['longitude'],
+			'camera_name': data_weapon_c['video_name'],
+			'datetime': data_weapon_c['datetime'],
+			'threat_status': data_weapon_c['Threat_status'],
+			'school_id': 'c52e3b1c-26e2-11f0-b7e7-e28b11b5589a'
+			#'554330a5-2230-11f0-931d-42010a400002'
+		}
+		log.info("post to local wep RESTful service" + data_weapon)
 		response = requests.post(local_restful_event_url, json=data_weapon)
+		path = os.path.join('.', 'inferences', data_weapon_c['video_name'], data_weapon_c['image_path'])		
+		if os.path.exists(path):
+			with open(path, "rb") as f:
+				files = {
+                    "image": f
+                }
+				responseDB = requests.post(local_restful_url, files=files,
+							 data={"data": json.dumps(data_dict)})
+				log.info(f"response: {responseDB}")
 		log.info(f"response: {response}")
-
-		log.info("post to remote RESTful service " + data_weapon + ", url:" + cfg.restful[cons.URL])
+		log.info("post to remote RESTful service" + data_weapon + ", url:" + cfg.restful[cons.URL])
 		response = requests.post(cfg.restful[cons.URL], json=data_weapon)
 		log.info(f"response: {response}")
 	except Exception as e:
 		log.error("Failed to post to RESTful service: {}".format(e))
 	pass
+
+
+# def do_restful(data_weapon):
+# 	try:
+# 		log.info("RESTful: {}".format(cfg.restful))
+# 		if not cfg.restful[cons.ENABLE]:
+# 			log.info("RESTful post is disabled")
+# 			return
+
+# 		log.info("post to local wep RESTful service " + data_weapon)
+# 		response = requests.post(local_restful_event_url, json=data_weapon)
+# 		log.info(f"response: {response}")
+
+# 		log.info("post to remote RESTful service " + data_weapon + ", url:" + cfg.restful[cons.URL])
+# 		response = requests.post(cfg.restful[cons.URL], json=data_weapon)
+# 		log.info(f"response: {response}")
+# 	except Exception as e:
+# 		log.error("Failed to post to RESTful service: {}".format(e))
+# 	pass
 
 def do_mqtt(data_weapon):
 	try:
