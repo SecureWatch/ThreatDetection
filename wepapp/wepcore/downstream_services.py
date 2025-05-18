@@ -18,6 +18,15 @@ def do_push(data_weapon):
 	# do_raptor_create_incident(data_weapon)
 	do_restful(data_weapon)
 
+camera_map = {
+	"Camera1": "6b2a6da4-284d-11f0-a894-6f2e99758024",
+	"Camera2": "6b2a79ac-284d-11f0-a894-6f2e99758024",
+	"Camera3": "6b2a7baa-284d-11f0-a894-6f2e99758024",
+	"Camera4": "6b2a7ce0-284d-11f0-a894-6f2e99758024",
+	"Camera5": "6b2a7e02-284d-11f0-a894-6f2e99758024",
+	"Camera6": "6b2a7f38-284d-11f0-a894-6f2e99758024"
+}
+
 def do_restful(data_weapon):
 	try:
 		log.info("RESTful: {}".format(cfg.restful))
@@ -28,11 +37,11 @@ def do_restful(data_weapon):
 			data_weapon_c = json.loads(data_weapon)
 		data_dict = {
 			'camera_loc': data_weapon_c['longitude'],
+			'camera_uid': camera_map[data_weapon_c['video_name']],
 			'camera_name': data_weapon_c['video_name'],
 			'datetime': data_weapon_c['datetime'],
 			'threat_status': data_weapon_c['Threat_status'],
-			'school_id': '0fca6c00-2705-11f0-9e15-15bb6df06b45'
-			#'554330a5-2230-11f0-931d-42010a400002'
+			'school_id': '6b24ac2a-284d-11f0-a894-6f2e99758024'
 		}
 		log.info("post to local wep RESTful service" + data_weapon)
 		response = requests.post(local_restful_event_url, json=data_weapon)
